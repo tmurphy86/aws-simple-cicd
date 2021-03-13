@@ -110,10 +110,10 @@ def semver_handler(event, context):
     repo = params['repo']
     branch = params['branch']
 
-    ssm_param = "{ssm_root} + '/' + {repo} + '/' + {branch} + '/version'"
+    ssm_param = ssm_root + '/' + repo + '/' + branch + '/version'
 
     response = ssm.get_parameter(
-        Name=ssm_param,
+        Names=[ssm_param],
         WithDecryption=False
     )
     version = semver.parse_version_info(response['Parameter']['Value'])
