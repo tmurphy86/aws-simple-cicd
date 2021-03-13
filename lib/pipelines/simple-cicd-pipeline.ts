@@ -175,7 +175,7 @@ export class SimpleCicdPipeline extends Pipeline {
     })
 
     // Push SemVer to Parameter Store
-    let semverParam = `${ssmRoot}/simple-cicd/${repoName}/${repoBranch}/version`
+    let semverParam = `${ssmRoot}${repoName}/${repoBranch}/version`
     new ssm.StringParameter(this, `${repoName}${repoBranch}Version`, {
       description: `Version number of ${repoName}/${repoBranch}`,
       parameterName: semverParam,
