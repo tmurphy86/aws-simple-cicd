@@ -110,7 +110,7 @@ def semver_handler(event, context):
     repo = params['repo']
     branch = params['branch']
 
-    ssm_param = ssm_root + '/codecommit/' + repo + '/' + branch + '/version'
+    ssm_param = ssm_root + '/' + repo + '/' + branch + '/version'
 
     response = ssm.get_parameter(
         Name=ssm_param,
@@ -130,7 +130,6 @@ def semver_handler(event, context):
     # then fail the job and log the exception message.
     print('Function failed due to exception.') 
     print(e)
-    print(version + "empty TJM")
     traceback.print_exc()
     put_job_failure(job_id, 'Function exception: ' + str(e))
 

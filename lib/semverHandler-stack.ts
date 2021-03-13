@@ -43,7 +43,7 @@ export class SemverHandlerStack extends cdk.Stack {
 
     // Provision Lambda
     const semverHandler = new lambda.Function(this, 'semverHandler', {
-      code: lambda.Code.asset('./lambda-helpers/semver-handler'),
+      code: lambda.Code.fromAsset('./lambda-helpers/semver-handler'),
       functionName: `${props.prefix}-cicd-semverHandler`,
       handler: 'lambda.semver_handler',
       runtime: lambda.Runtime.PYTHON_3_8,
