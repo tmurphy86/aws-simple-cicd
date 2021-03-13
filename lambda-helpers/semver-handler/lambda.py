@@ -130,6 +130,7 @@ def semver_handler(event, context):
     # then fail the job and log the exception message.
     print('Function failed due to exception.') 
     print(e)
+    print(version + "empty TJM")
     traceback.print_exc()
     put_job_failure(job_id, 'Function exception: ' + str(e))
 
