@@ -109,7 +109,7 @@ def semver_handler(event, context):
     params = get_user_params(job_data)
     repo = params['repo']
     branch = params['branch']
-
+    # removed path for code commit
     ssm_param = ssm_root + '/' + repo + '/' + branch + '/version'
 
     response = ssm.get_parameter(
