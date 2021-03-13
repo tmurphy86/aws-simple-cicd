@@ -113,7 +113,7 @@ def semver_handler(event, context):
     ssm_param = ssm_root + '/' + repo + '/' + branch + '/version'
 
     response = ssm.get_parameter(
-        Names=ssm_param,
+        Name=ssm_param,
         WithDecryption=False
     )
     version = semver.parse_version_info(response['Parameter']['Value'])
