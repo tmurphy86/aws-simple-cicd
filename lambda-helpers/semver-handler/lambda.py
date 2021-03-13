@@ -110,7 +110,7 @@ def semver_handler(event, context):
     repo = params['repo']
     branch = params['branch']
     # removed path for code commit
-    ssm_param = ssm_root + '/' + repo + '/' + branch + '/version'
+    ssm_param = ssm_root + '/simple-cicd/' + repo + '/' + branch + '/version'
 
     response = ssm.get_parameter(
         Name=ssm_param,
