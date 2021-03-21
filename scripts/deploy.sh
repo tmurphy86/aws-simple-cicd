@@ -14,5 +14,4 @@ npm install
 npm run build
 
 # Deploy
-cdk bootstrap
 cdk deploy --all --require-approval never
