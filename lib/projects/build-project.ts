@@ -51,6 +51,7 @@ export class BuildProject extends PipelineProject {
           },
           build: {
             commands: [
+              'aws s3 cp ${CODEBUILD_SRC_DIR} s3://murphy-amazon-ab-demo-cicd/admin/config/project-config.json',
               'bash ${CODEBUILD_SRC_DIR}/scripts/build.sh'
             ]
           }
