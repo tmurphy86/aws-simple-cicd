@@ -24,7 +24,6 @@ import s3deploy = require('@aws-cdk/aws-s3-deployment')
 import { Bucket } from '@aws-cdk/aws-s3'
 import { SimpleCicdPipeline } from './pipelines/simple-cicd-pipeline'
 import PipelineRole from './iam/pipeline-role';
-
 import { ProjectRepo } from '../config/config';
 
 interface CicdStackProps extends cdk.StackProps {

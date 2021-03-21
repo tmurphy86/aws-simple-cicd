@@ -36,7 +36,7 @@ The number of stages and their function is fully customizable e.g. adding a stag
 
 ### AWS services
 
-- AWS CodeCommit (or any source control providor supported by CodePipeline)
+- AWS CodeCommit (or any source control provider supported by CodePipeline)
 - AWS CodePipeline
 - AWS CodeBuild
 - AWS Lambda

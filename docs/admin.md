@@ -51,7 +51,7 @@ cd cross-account
 
 aws cloudformation deploy --template-file deployment-role.yaml --stack-name cicd-iam-stack --capabilities CAPABILITY_NAMED_IAM --parameter-overrides SharedAccountId={SHARED-ACCOUNT-ID}
 ```
-Note: Replace {SHARED-ACCOUNT-ID} with the appropiate ID.
+Note: Replace {SHARED-ACCOUNT-ID} with the appropriate ID.
 
 The IAM role name in the sample provided is ***deployment-role***.
 

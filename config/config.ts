@@ -16,16 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
-import configFile from "../project-config.json"
+import configFile from "../project-config.json";
 
 export enum TriggerType {
   CodeCommit = "CodeCommit",
   GitHub = "GitHub"
-}
-
-export enum Regions {
-  CanadaCentral="CA-CENTRAL-1"
 }
 
 export enum StageName {
