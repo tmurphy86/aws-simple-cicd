@@ -6,17 +6,17 @@ A serverless CI/CD platform leveraging native AWS services provisioned using the
 
 ```mermaid
 graph TD
-    A[Simple CICD Pipelines fas:fa-code] -->|fas:fa-terminal git push| B[git repo fas:fa-code-branch]
+    A[ CICD Pipelines fas:fa-code ] -->|fas:fa-terminal git push| B[ git repo fas:fa-code-branch ]
     B -->|git webhooks| C{fab:fa-aws AWS Pipeline}
-    C -->|Start|D[fab:fa-aws AWS CodeBuild fas:fa-tools]
-    D -->|Sends Build File|E[Lambda]
-    E -->F[AWS KMS fas:fa-key]-->E
-    E -->G[S3 Artifacts fab:fa-bitbucket] -->E
+    C -->|Start|D[ fab:fa-aws AWS CodeBuild fas:fa-tools ]
+    D -->|Sends Build File|E[ Docker]
+    E -->F[ AWS KMS fas:fa-key ]-->E
+    E -->G[ S3 Artifacts fab:fa-bitbucket ] -->E
     E -->|Return Results|D
     D -->|Done|C
-    C -->|Start| O[fab:fa-aws AWS CodeDeploy fas:fa-parachute-box] -->|far:fa-check-circle  fas:fa-ban| M[fab:fa-aws Dev Account]
-    O -->|far:fa-check-circle  fas:fa-ban| N[fab:fa-aws Staging Account]
-    O -->|far:fa-check-circle  fas:fa-ban| P[fab:fa-aws Production Account]
+    C -->|Start| O[ fab:fa-aws AWS CodeDeploy fas:fa-parachute-box ] -->| far:fa-check-circle  fas:fa-ban | M[ fab:fa-aws Dev Account ]
+    O -->|far:fa-check-circle  fas:fa-ban | N[ fab:fa-aws Staging Account ]
+    O -->|far:fa-check-circle  fas:fa-ban | P[ fab:fa-aws Production Account  ]
     O --> |Done| C
 ```
 </center>
@@ -26,17 +26,11 @@ graph TD
 
 ## Defining your environment & projects
 
-
+Create a project-config.json file in the root of the Pipeline project. There is a sample project-config.sample.json file provided
 ### AWS CodePipeline
+Walk through the Code Pipelines to show detail log reports of a successful cicd build and then a failed one.
 
-### Security
-
-### AWS CodeBuild
-
-### Monitoring 
-
-### AWS CodeDeploy
-
+Run an update git push and build. Approx. 6-7 minutes.
 
 ### AWS services
 
